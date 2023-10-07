@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage[margin=2cm]{geometry}
+
+\usepackage{amsmath, amsthm, amssymb}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\usepackage[hidelinks]{hyperref}
+
+\usepackage{subcaption}
+\usepackage{graphicx}
+
+\usepackage{verbatim}
+
+\usepackage{libertinust1math}
+\usepackage{libertine}
+
+\usepackage{inconsolata}
+
+\usepackage[english]{babel}
+\usepackage[autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
+
+\DeclareCaptionLabelSeparator{custom}{.}
+\DeclareCaptionFormat{custom}{\textbf{#1#2} #3}
+
+\captionsetup{
+  format=custom,
+  labelsep=custom
+}
+
+\newtheoremstyle{customthm}
+{}{}{}{}
+{\scshape \bfseries}{.}{ }{}
+\theoremstyle{customthm}
+% \theoremstyle{definition}
+\newtheorem*{definition}{Definition}
+\newtheorem*{lemma}{Lemma}
+
+\newenvironment{cproof}[1][\proofname]{%
+  \proof[\scshape #1]%
+}{\endproof}
+
+\renewcommand{\qedsymbol}{\( \blacksquare \)}
+
+\begin{document}
+
+\section*{Lecture: A Restricted Random Walk}
+
+\vspace{-0.2cm}
+
+\textit{Rushil Surti}
+
+\vspace{0.2cm}
+
+% This will have some written sections as I see fit, but I mean I'm not going
+% to script the entire thing. I have a general sense of knowing what I'm
+% talking about to actually y'know talk about it. This will consist mainly of
+% bullet points and notes on things I want to say. Perhaps if I'm utilizing
+% my best rhetoric I shall be putting things down in more verbosity.
+\input{body.tex}
+
+\end{document}

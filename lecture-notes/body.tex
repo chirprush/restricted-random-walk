@@ -1,0 +1,124 @@
+% Time to use my expert non-existent rhetoric skills to woo the audience.
+
+\subsection*{Introduction}
+
+The basic structure should be:
+\begin{itemize}
+    \item Greetings
+    \item Explain how the lesson I'm trying to teach isn't quite central to the
+        problem itself but rather wide reaching in terms of how to approach math.
+    \item Explain the basic genre of the problem and the context (intersection
+        of probability and a little bit of physics).
+\end{itemize}
+
+What I really aim to teach here isn't so much some new piece of mathematics or
+some fancy trick (not that I don't appreciate those now and again), but rather
+a way to approach math. Certainly I find the problem I'm presenting interesting
+(otherwise I wouldn't be presenting it), but in all honesty whether or not you
+like it as much as I do is simply up to you.
+
+Some of this stuff above is probably meh.
+
+The statement of the problem is as such: "If a particle at the origin takes a
+path of distance \( 1 \), what is its displacement?" For those not quite
+familiar with the specific terminology, a brief way to say it would be that
+distance is the numeric value capturing the length of the path, and the
+displacement is where the path takes you \textit{(refer to diagram)}. So, in
+other words, if a particle takes a path of length 1, where does it end up? I'll
+leave you a little time to ponder that.
+
+The answer is that it's a trick question; I think it's rather obvious that you
+\textit{can't really know}. In fact, this was question posed to us by Neff (for
+those who don't know him, he's the Physics 1 and 2 teacher), and it was a
+question posed to demonstrate the differences between distance and
+displacement.
+
+That being said, we're mathematicians, so it's not as if we can't get any
+information of this. Instead, let us consider the \textit{probability
+distribution} of displacements given that the particle chooses some random
+path. That is, if all the paths are equally likely to be chosen, what is the
+probability that we arrive at any single point?
+
+\subsection*{Properties}
+
+Things to talk about:
+\begin{itemize}
+    \item How the particle stays inside the circle
+    \item Rotational symmetry (problem solving technique)
+\end{itemize}
+
+\subsection*{Modeling}
+
+This is where some of the real fun stuff begins. Now that we have an idea in
+mind for the problem, we have to really consider: \textit{what is a path?}.
+This isn't a trivial question, and I spent a little bit of time formulating and
+modeling our paths in a way that could be useful.
+
+The way we're going to do it is break the path into some fixed number of steps
+(or line segments) \( N \). By our condition of a length \( 1 \) path, this
+means each step has a length of \( 1 / N \). Each step, in turn, is just a
+randomly chosen point \( 1 / N \) units away; in other words, we pick uniformly
+from all points on a circle of radius of \( 1 / N \).
+
+But obviously, this path is far too coarse for what we want. We want the number
+of line segments to go to infinity, with the length of the segments themselves
+being infinitesimal, with this all being summed up. In other words, I'm hinting
+at this: an integral over a continuum of random variables (we technically call
+this a stochastic random process), which honestly looks pretty cool. That being
+said, for us to be able to work with this better, we do have to transform this
+into the slightly less cool-looking summation.
+
+Now the only problem with evaluating this is that it's really hard. When adding
+random variables, you need to consider all infinite cases where points add and
+then multiply probabilities. This is bearable in one dimension, but not really
+for two dimensions. In fact, with our circle, there is a very geometric view of how
+annoying this would be for even just adding two variables.
+
+While that may be a roadblock, it doesn't quite stop us from figuring out the
+distribution altogether; we just have to get a bit creative. Here's where we
+see another problem solving technique: reducing the dimension or complexity of
+the problem in a way that benefits us.
+
+In particular, we can take a single component of the path and use the triangle
+inequality to see that it can be anywhere in this radius sized interval. This
+turns an awkward circular distribution into a nice uniform distribution. If you
+remember, we only need a slice to figure out the whole distribution, so we
+aren't losing any information by doing this.
+
+Adding up the \( N \) random variables, we get a simple\textit{-er}
+distribution that we can actually graph. And when we do, something very
+interesting happens.
+
+As we increase the values of \( N \), the distribution gets pinched further and
+further. With this in mind, if we let \( N \) go to infinity the problems true
+colors reveal itself.
+
+We get the Dirac delta distribution, defined to have infinite probability at
+the origin and zero probability everywhere else. We said earlier that we
+couldn't know where the particle was, but in reality it's almost impossible for
+it to be anywhere but the origin. Obviously that's not to say it couldn't be
+anywhere else, but it is sure darn likely.
+
+Now that I have hopefully wooed you with the amazing and unintuitive result,
+I'll show a simulation that probably makes it far more clear why this happens.
+
+\subsection*{Conclusion}
+
+To be a mathematician is to be constantly asking yourself questions. To be a
+mathematician is to be constantly learning and out on perhaps an adventure of
+knowledge. I've always thought conventional, especially school teaching, of
+mathematics to be quite boring and not really representative of math as a whole. While
+teaching from the basics does have some of its merits, I've found that creating
+and solving my own problems has led me to learn far more than school could
+teach me. I mean heck these sorts of probability problems are how I learned
+stats and even comp sci a while back.
+
+My wish for you: find a problem that captivates you. It could be small or
+ambitious, on a subject that you're familiar with or maybe you're not familiar
+with. Maybe it doesn't even have to be related to math. \textit{Find a problem that
+captivates you, and enjoy it.} If you can do that, I genuinely do think you'll
+learn something amazing.
+
+And with that, there's my Math and Physics presentation. I really enjoyed the
+club last year and I hope I can be your officer this year. I'll enjoy the other
+presentations; that's all from me.
